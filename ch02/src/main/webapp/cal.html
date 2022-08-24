@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="common.css">
+<script type="text/javascript">
+	function chk() {
+		if (!frm.num1.value) {	alert("첫번째  수자를 입력하세요");
+			frm.num1.focus();	return false;		}
+	}
+</script></head><body>
+<h2>사칙연산</h2>
+<form action="Cal" name="frm" onsubmit="return chk()">
+<table>
+	<tr><th>첫번 째 숫자</th><td><input type="number" name="num1"
+		autofocus="autofocus"></td></tr>
+	<tr><th>두번 째 숫자</th><td><input type="number" name="num2"
+		required="required"></td></tr>
+	<tr><th colspan="2"><input type="submit" value="확인">
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="common.css">
+<script type="text/javascript">
+	function chk() {
+		if (!frm.num.value) {	alert("숫자를 입력하세요");
+			frm.num.focus();	return false; // action(Sum)울 가지마라
+		}
+	}
+</script>
+</head><body>
+<h2>누계할 숫자</h2>
+<form action="Sum" name="frm" onsubmit="return chk()">
+<table>
+	<tr><th>숫자</th><td><input type="number" name="num" autofocus="autofocus"></td></tr>
+	<tr><th colspan="2"><input type="submit" value="확인"></th></tr>
+</table>
+</form>
+</body>
+</html>
