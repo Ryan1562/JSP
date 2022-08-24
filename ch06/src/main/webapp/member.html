@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="common.css">
+<script type="text/javascript">
+	function chk() {
+		if (frm.pass.value != frm.confrimPass.value) {	alert("암호와 암호확인이 다릅니다");
+			frm.pass.focus();  frm.pass.value = "";
+			frm.confrimPass.value = "";  return false;
+		}
+	}
+</script>
+</head><body>
+<!-- <form action="member1.jsp" name="frm" onsubmit="return chk()"> -->
+<!-- <form action="member2.jsp" name="frm" onsubmit="return chk()"> -->
+<form action="member3.jsp" name="frm" onsubmit="return chk()">
+<table><caption>회원 정보</caption>
+	<tr><th>아이디</th><td><input type="text" name="id" autofocus="autofocus" required="required"></td></tr>
+	<tr><th>암호</th><td><input type="password" name="pass" required="required"></td></tr>
+	<tr><th>암호확인</th><td><input type="password" name="confrimPass" required="required"></td></tr>
+	<tr><th>이름</th><td><input type="text" name="name" required="required"></td></tr>
+	<!-- placeholder="010-1111-1111" 미리보기 처럼 보여주지만 글자 입력하면 사라짐 -->
+	<!-- pattern="010-\d{3,4}-\d{4}" \d(decimal) 010시작-정수3또는 4자리 - 정수 4자리 -->
+	<!-- title="010-1111-1111" 입력 형식이 맞지 않을 때 형식을 제공 -->
+	<tr><th>전화</th><td><input type="tel" name="tel" required="required" 
+		placeholder="010-1111-1111" pattern="010-\d{3,4}-\d{4}"
+		title="010-1111-1111"></td></tr>
+	<tr><th colspan="2"><input type="submit"></th></tr>
+</table>
+</form>
+</body>
+</html>
