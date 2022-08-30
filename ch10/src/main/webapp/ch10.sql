@@ -7,3 +7,5 @@ create table member2(
 	 reg_date date
 );
 insert into member2 values('k1','1','로제','강남','010-1111-1111',sysdate);
+alter table member2 add (del char(1) default 'n');
+select * from member2;

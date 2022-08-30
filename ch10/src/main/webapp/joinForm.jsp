@@ -5,6 +5,12 @@
 <link rel="stylesheet" type="text/css" href="common.css">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
+	function chk() {
+		if (frm.password.value != frm.confirmPass.value) {
+			alert("암호와 암호 확인이 다릅니다");  frm.password.focus();
+			frm.password.value = "";  frm.confirmPass.value = ""; return false;
+		}
+	}
 	function dupChk() {
 		if (!frm.id.value) {	alert("아이디를 입력하고 체크하시오");
 			frm.id.focus(); return false; 			
@@ -18,7 +24,7 @@
 		/* window.open("confirm1.jsp?id="+frm.id.value,"","width=300 height=300"); */
 	}
 </script></head><body>
-<form action="join.jsp" method="post" name="frm">
+<form action="join.jsp" method="post" name="frm" onsubmit="return chk()">
 <table><caption>회원 가입</caption>
 	<tr><th>아이디</th><td><input type="text" name="id" required="required"
 		autofocus="autofocus"> <input type="button" value="중복체크" onclick="dupChk()">
@@ -35,6 +41,6 @@
 	<tr><th colspan="2"><input type="submit" value="확인"></th></tr>
 </table>
 </form>
-<button oncancel="location.href='loginForm.jsp'">로그인</button>
+<button onclick="location.href='loginForm.jsp'">로그인</button>
 </body>
 </html>

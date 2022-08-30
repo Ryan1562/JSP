@@ -7,6 +7,7 @@ public class Member {   // DTO, VO
 	private String  address;
 	private String  tel;
 	private Date  reg_date;
+	private String del;
 	
 	public String getId() {
 		return id;
@@ -43,6 +44,12 @@ public class Member {   // DTO, VO
 	}
 	public void setReg_date(Date reg_date) {
 		this.reg_date = reg_date;
+	}
+	public String getDel() {
+		return del;
+	}
+	public void setDel(String del) {
+		this.del = del;
 	}
 	
 }
