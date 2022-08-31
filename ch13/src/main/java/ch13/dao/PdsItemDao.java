@@ -1,6 +1,9 @@
 package ch13.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -44,5 +47,32 @@ public class PdsItemDao {
 			}catch (Exception e) {		}
 		}
 		return result;
+	}
+	public List<PdsItem> list() {
+		List<PdsItem> list = new ArrayList<>();
+		Connection conn = getConnection();
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select * from pds_item order by id desc";
+		try {
+			pstmt = conn.prepareStatement(sql);			
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				PdsItem pi = new PdsItem();
+				pi.setId(rs.getInt("id"));
+				pi.setFileName(rs.getString("filename"));
+				pi.setFileSize(rs.getInt("filesize"));
+				pi.setDescription(rs.getString("description"));
+	
+				list.add(pi);
+			}
+		}catch (Exception e) {	System.out.println(e.getMessage());
+		}finally {
+			try{if (rs != null) rs.close();
+				if (pstmt != null) pstmt.close();
+				if (conn != null)  conn.close();
+			}catch (Exception e) {		}
+		}
+		return list;
 	}
 }

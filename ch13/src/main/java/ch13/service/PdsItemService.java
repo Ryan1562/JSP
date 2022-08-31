@@ -1,5 +1,6 @@
 package ch13.service;
 import java.io.File;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import com.oreilly.servlet.MultipartRequest;
@@ -34,6 +35,11 @@ public class PdsItemService {
 			System.out.println(e.getMessage());
 		}
 		return result;
+	}
+	public List<PdsItem> list() {
+		PdsItemDao pid = PdsItemDao.getInstance();
+		List<PdsItem> list = pid.list(); 
+		return list;
 	}
 
 }

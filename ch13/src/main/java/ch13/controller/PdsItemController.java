@@ -1,6 +1,7 @@
 package ch13.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ch13.dao.PdsItem;
 import ch13.service.PdsItemService;
 @WebServlet("*.action") // 끝의 확장자가 action끝나면 이 컨트롤러로 받아서 처리
 public class PdsItemController extends HttpServlet {
@@ -28,7 +30,11 @@ public class PdsItemController extends HttpServlet {
 			int result = pis.insert(request);
 			request.setAttribute("result", result);
 			pgm = "upload_result.jsp";
-		}
+		} else if (command.equals("pds/list.action")) {
+			List<PdsItem> list= pis.list();
+			request.setAttribute("list", list);  // jsp에 전달
+			pgm = "list.jsp";
+		} 
 		RequestDispatcher rd = request.getRequestDispatcher(pgm);
 		rd.forward(request, response);
 	}

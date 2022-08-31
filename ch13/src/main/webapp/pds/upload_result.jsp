@@ -6,6 +6,7 @@
 <c:if test="${result > 0}">
 	<script type="text/javascript">
 		alert("업로드가 성공하였습니다");
+		location.href="list.action";
 	</script>
 </c:if>
 <c:if test="${result == 0}">
