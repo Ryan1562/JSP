@@ -4,12 +4,9 @@
 <title>Insert title here</title>
 <style type="text/css">@import url("common.css");</style>
 </head><body>
-<%	String pageNum = request.getParameter("pageNum");
-	int num = Integer.parseInt(request.getParameter("num"));
-%>
-<form action="delete.jsp" method="post">
-	<input type="hidden" name="num" value="<%=num %>">
-	<input type="hidden" name="pageNum" value="<%=pageNum %>">
+<form action="delete.do" method="post">
+	<input type="hidden" name="num" value="${num}">
+	<input type="hidden" name="pageNum" value="${pageNum}">
 <table><caption>게시글 삭제</caption>
 	<tr><th>암호</th><td><input type="password" name="password" required="required"
 		autofocus="autofocus"></td></tr>
