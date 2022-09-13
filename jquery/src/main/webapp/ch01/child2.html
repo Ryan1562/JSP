@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	/* pt는 point의 약자 1/72인치 해상도에 영향이 없음 */
+	em { font-size: 20pt; line-height: 20pt; margin: 20px; color: blue; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 조상과 후손
+		$('p em').css('background','yellow').each(function() {
+			$('.result1').append($(this).text()+"\n");
+		});
+		// 부모와 자식
+		$('div > em').css('background','pink').each(function() {
+			$('.result2').append($(this).text()+"\n");
+		});
+		console.log('검섹된 엘리먼트 수 : '+$('p em').length);
+		console.log('검섹된 엘리먼트 수 : '+$('p > em').length);
+	});
+</script></head><body>
+	<p><em>하나</em><em>둘</em><span><em>셋</em></span></p>
+	<div><em>넷</em><span><em>다섯</em></span><em>여섯</em></div>
+	<div><span>조상과 후손으로 검색된 엘리먼트 :</span>
+		 <span class="result1"></span></div>
+	<div><span>조상과 자식으로 검색된 엘리먼트 :</span>
+		 <span class="result2"></span></div>
+</body>
+</html>
