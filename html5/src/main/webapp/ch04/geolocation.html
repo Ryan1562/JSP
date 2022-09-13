@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><title>위치 정보 사용</title>
+<meta charset="UTF-8">
+<script type="text/javascript">
+	navigator.geolocation.getCurrentPosition(function(position) {
+		alert("위도: " + position.coords.latitude + "경도: "
+				+ position.coords.longitude);
+	}, function(error) {
+		alert(Error.message);
+	});
+</script>
+</head>
+<body>
+</body>
+</html>

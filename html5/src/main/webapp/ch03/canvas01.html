@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#paper { border-color: green; border-width: thick; border-style: solid; }
+</style>
+<script type="text/javascript">
+	function drawRect() {
+		var a4 = document.getElementById("paper");
+		var ctx = a4.getContext("2d");
+		ctx.fillStyle = "#648975"; // "rgb(255, 255, 0)"; //"blue";
+		//           x축 y축  가로 세로
+		ctx.fillRect(10, 10, 50, 50);
+	}
+</script></head><body onload="drawRect()">
+	<canvas id="paper" width="300" height="300"></canvas>
+</body>
+</html>

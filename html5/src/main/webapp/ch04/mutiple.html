@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>폼 요소</title>
+<script type="text/javascript">
+	function showFile() {
+		var selectFiles = document.getElementById("file").files;
+		var disp = document.getElementById("disp");
+		var str = "";
+		var fileAr = [];
+		for (var i = 0; i < selectFiles.length; i++) {
+			var file = selectFiles[i];
+			// fileAr.push("파일명:" + file.name + " 크기:" + file.size);
+			str += "파일명 : "+file.name+", 크기 : "+file.size+"<br>";
+		}
+		// alert(fileAr.join("\n"));
+		disp.innerHTML = str;
+	}
+</script>
+</head>
+<body>
+	<form>
+		<input type="file" id="file" multiple onchange="showFile()">
+		<div id="disp"></div>
+	</form>
+</body>
+</html>

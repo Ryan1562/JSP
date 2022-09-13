@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#paper { border: 3px solid green; }
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var a4 = document.getElementById("paper");
+		var ctx = a4.getContext("2d");
+		ctx.strokeStyle = "red";
+		ctx.fillStyle = "blue";
+		//       x   y   r 시작각도 끝각도(래디안)    반시계 방향  
+		// Math.PI / 180 * 360 => Math.PI * 2
+		ctx.arc(70, 70, 30, 0, Math.PI * 2, true);
+	//	ctx.stroke();
+		ctx.fill();
+	}
+</script></head><body>
+<canvas id="paper" width="300" height="300"></canvas>
+</body>
+</html>

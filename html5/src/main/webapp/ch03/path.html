@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#paper { border-color: green; border-width: thick; border-style: solid; }
+</style>
+<script type="text/javascript">
+function drawRect() {
+	var a4 = document.getElementById("paper");
+	var ctx = a4.getContext("2d");
+	ctx.strokeStyle = "red";  // 선색
+	ctx.beginPath();          // 선 시작
+	ctx.moveTo(50, 50);      // x축 100, y축 50
+	ctx.lineTo(100, 50);
+	ctx.lineTo(50, 100);
+	ctx.closePath();          // 경로 종료
+	ctx.stroke();             // 실제로 선 그리기
+}
+</script></head>
+<body onload="drawRect()">
+	<canvas id="paper" width="300" height="300"></canvas>
+</body>
+</html>

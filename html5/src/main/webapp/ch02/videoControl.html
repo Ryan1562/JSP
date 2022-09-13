@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var video = document.getElementById("video");
+		var play = document.getElementById("play");
+		var pause = document.getElementById("pause");
+		var status = document.getElementById("status");
+		play.onclick = function() {  video.play();		}
+		pause.onclick = function() {  video.pause();		}
+		video.addEventListener("timeupdate", function() {
+			var current = video.currentTime;
+			var total = video.duration;
+			status.innerHTML = Math.round(current)+" / "+ Math.round(total);
+		});
+	}
+</script></head><body>
+<div><video id="video" src="../images/SANY0103.MP4" width="400" height="300"
+		controls="controls" autoplay="autoplay" preload="auto"></video></div>
+<div>
+	<button id="play">play</button>
+	<button id="pause">pause</button>
+	<span id="status"></span>
+</div>
+</body>
+</html>

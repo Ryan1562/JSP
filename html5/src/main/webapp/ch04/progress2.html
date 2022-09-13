@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pro() {
+		var prog = 0;
+		var bar = document.getElementById("bar");
+		var m = document.getElementById("m");
+		var time = setInterval(() => {
+			prog += 10;
+			bar.value = prog;
+			m.value = prog;
+			if (bar.value >= 100) {
+				clearInterval(time);
+			}
+		}, 1000);
+	}
+</script></head><body>
+<form action="">
+	진행1 : <progress max="100" value="0" id="bar"></progress><p>
+	진행2 : <meter value="0" max="100" min="0" low="30" high="70" id="m"></meter><p>
+	<input type="button" onclick="pro()" value="확인">
+</form>
+</body>
+</html>

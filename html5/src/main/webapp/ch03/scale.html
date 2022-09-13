@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#paper {  border: 3px solid green; }
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var a4 = document.getElementById("paper");
+		var ctx = a4.getContext("2d");
+		//         x    y  크기를 반으로
+	//	ctx.scale(0.5, 0.5);
+		ctx.scale(2.0, 2.0);
+		ctx.fillStyle = "red";
+		ctx.fillRect(0, 0, 50, 50);
+		// 두배로 바뀌어야 하지만 위에서 0.5로 줄였기 때문에 크기가 원위치 0,5 * 2 = 1
+		ctx.fillStyle = "blue";
+	//	ctx.scale(2.0, 2.0);
+		ctx.scale(0.5, 0.5);
+		ctx.fillRect(50, 50, 50, 50);
+	} 
+</script></head><body>
+	<canvas id="paper" width="300" height="300"></canvas>
+</body>
+</html>

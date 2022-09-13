@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var audio = new Audio("../images/LoveyDovey.mp3");
+	audio.addEventListener("timeupdate", function() {
+		var disp = document.getElementById("disp");
+		disp.innerHTML = Math.round(audio.currentTime)+" / "+Math.round(audio.duration);
+		audio.volume= 0.5;
+		audio.loop = true;
+	});
+</script></head><body>
+	<button onclick="audio.play()">음악듣기</button>
+	<div id="disp"></div>
+</body>
+</html>

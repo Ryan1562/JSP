@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#paper { border-color: green; border-width: thick; border-style: solid; }
+</style>
+<script type="text/javascript">
+function drawRect() {
+	var a4 = document.getElementById("paper");
+	var ctx = a4.getContext("2d");
+	ctx.fillStyle = "#648975";           // 면색   
+	ctx.strokeStyle = "rgb(200,10,50)";  // 선색
+	ctx.fillRect(10, 10, 100, 100);      // 사각형 내부를 채워서
+	ctx.strokeRect(10, 10, 100, 100);    // 경계선(외각선)을 그려라
+}
+</script></head>
+<body onload="drawRect()">
+	<canvas id="paper" width="300" height="300"></canvas>
+</body>
+</html>

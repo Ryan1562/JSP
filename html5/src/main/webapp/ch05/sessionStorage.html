@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var list; // 여러 function에서 같이 사용, 전역 변수
+	function st() {
+		list = document.getElementById("list");
+		add = document.getElementById("add");
+		remove = document.getElementById("remove");
+		clear = document.getElementById("clear");
+		add.addEventListener("click", addData);
+		remove.addEventListener("click", removeData);
+		clear.addEventListener("click", clearData);
+		init();
+	}
+	function addData() {
+		var key = document.getElementById("key").value;
+		var val = document.getElementById("val").value;
+		sessionStorage[key] = val;
+		init();
+		document.getElementById("key").value = "";
+		document.getElementById("val").value = "";
+	}
+	function removeData() {
+		if (list.selectedIndex < 0) return;
+		var selectedIndex = list.options[list.selectedIndex].value;
+		sessionStorage.removeItem(selectedIndex);
+		init();
+	}
+	function clearData() {
+		sessionStorage.clear();  // 전체 삭제
+		init();
+	}
+	function init() {
+		list.innerHTML = "";
+		for (var i = 0; i < sessionStorage.length; i++) {
+			var key = sessionStorage.key(i);  // i번째 키 읽기
+			list.options[list.options.length] = 
+				new Option("키 : "+key+", 값 : "+sessionStorage[key], key);
+		}
+	}
+</script></head><body onload="st()">
+<select size="10" id="list"></select>
+<fieldset>
+	키 : <input type="text" id="key"><p>
+	값 : <input type="text" id="val"><p>
+	<input type="button" value="입력" id="add">
+	<input type="button" value="삭제" id="remove">
+	<input type="button" value="청소" id="clear"><p>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var worker;
+	function cal() {
+		if (worker) worker.terminate();  // 현재 worker가 backrground에서 작업하면 종료
+		worker = new Worker("worker.js");
+		var num = document.getElementById("num").value;
+		worker.postMessage(num);
+		worker.onmessage = function(event) {
+			alert(num+"까지 합계 : "+event.data);
+		};
+	}
+</script></head><body>
+<fieldset><legend>숫자 입력</legend>
+	<input type="number" id="num"><p>
+	<input type="button" value="계산" onclick="cal()">
+</fieldset>
+</body>
+</html>

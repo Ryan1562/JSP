@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#paper {  border: 3px solid green; }
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var a4 = document.getElementById("paper");
+		var ctx = a4.getContext("2d");
+		ctx.translate(5, 5);  // 중심 축(원점) 이동
+		for (var i =0; i < 5; i++) {
+			ctx.save();
+			ctx.fillStyle= "red";
+			ctx.globalAlpha = 1.0 - (0.2 * i);
+			ctx.translate(50*i, 50*i);
+			ctx.fillRect(0, 0, 60, 60);
+			ctx.restore();
+		}
+	} 
+</script></head><body>
+	<canvas id="paper" width="300" height="300"></canvas>
+</body>
+</html>

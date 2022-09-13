@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#paper { border: 3px solid green; }
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var a4 = document.getElementById("paper");
+		var ctx = a4.getContext("2d");
+	//	var grad = ctx.createLinearGradient(10, 10, 200, 200);
+	//	var grad = ctx.createLinearGradient(10, 10, 200, 10);
+	//	var grad = ctx.createLinearGradient(10, 10, 20, 200);
+		var grad = ctx.createLinearGradient(200, 200, 10, 10);
+		grad.addColorStop(0.0, "red");
+		grad.addColorStop(0.3, "blue");
+		grad.addColorStop(0.5, "yellow");
+		grad.addColorStop(0.8, "violet");
+		grad.addColorStop(1.0, "green");
+		ctx.fillStyle = grad;
+		ctx.fillRect(10, 10, 200, 200);
+	}
+</script></head><body>
+<canvas id="paper" width="300" height="300"></canvas>
+</body>
+</html>

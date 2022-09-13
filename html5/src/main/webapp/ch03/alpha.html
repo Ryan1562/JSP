@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#paper { border: 3px solid green; }
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var a4 = document.getElementById("paper");
+		var ctx = a4.getContext("2d");
+		ctx.fillStyle = "red";
+		ctx.globalAlpha = 0.2; // 0.5; // 0.7; // 1;
+		ctx.fillRect(10,  10, 100, 100);
+	}
+</script></head><body>
+<canvas id="paper" width="300" height="300"></canvas>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#paper { border: 3px solid green; }
+</style>
+<script type="text/javascript">
+	function draw() {
+		var a4 = document.getElementById("paper");
+		var ctx = a4.getContext("2d");
+		var img = new Image();
+		img.onload = function() {
+			// var prn = ctx.createPattern(img, 'repeat');
+			// var prn = ctx.createPattern(img, 'repeat-x');
+			// var prn = ctx.createPattern(img, 'repeat-y');
+			var prn = ctx.createPattern(img, 'no-repeat');
+			ctx.fillStyle = prn;
+			ctx.fillRect(0, 0, 300, 300);
+		}
+		img.src="../images/bul1.gif";
+	}
+</script></head><body onload="draw()">
+	<canvas id="paper" width="300" height="300"></canvas>
+</body>
+</html>

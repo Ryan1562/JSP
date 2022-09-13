@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#paper { border: 3px solid green; }
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var a4 = document.getElementById("paper");
+		var ctx = a4.getContext("2d");  
+		//                               시작 x   y   r  끝 x  y   r 
+		// var grad = ctx.createRadialGradient(60, 60, 30,   80,80, 80);
+		// var grad = ctx.createRadialGradient(80, 80, 80,   80,80, 0);
+		// var grad = ctx.createRadialGradient(80, 80, 0,   80,0, 80);
+		var grad = ctx.createRadialGradient(80, 80, 0,   80,80, 80);
+		grad.addColorStop(0.0, "red");
+		grad.addColorStop(0.3, "blue");
+		grad.addColorStop(0.5, "yellow");
+		grad.addColorStop(0.8, "violet");
+		grad.addColorStop(1.0, "green");
+		ctx.fillStyle=grad;
+		ctx.arc(80, 80, 80, 0, Math.PI *2 , true);
+		ctx.fill();
+	}
+</script></head><body>
+<canvas id="paper" width="300" height="300"></canvas>
+</body>
+</html>
