@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			$('div.a1').html("<h2>대박사건</h2>");
+			$('div.a2').text("<h2>대박사건</h2>");
+			$('div.a3').html(function(index) {
+				return "<h2>대박사건_"+index+"</h2>";
+			});
+		});
+	});
+</script></head><body>
+	<button>내용보기</button>
+	<div class="a1"></div><div class="a1"></div>
+	<div class="a2"></div><div class="a2"></div>
+	<div class="a3"></div><div class="a3"></div>
+</body>
+</html>

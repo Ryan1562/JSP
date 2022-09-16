@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 자바스크립에서는 [] 배열, 자바에서는 {}배열
+		var array = [
+			{name:'중앙',link:'http://www.choongang.co.kr'},
+			{name:'이전',link:'http://www.daum.net'},
+			{name:'네이놈',link:'http://naver.com'},
+			{name:'가글',link:'http://google.com'}
+		];
+		// 배열 array에 데이터 각각에 대하여 함수를 적용 
+		$.each(array, function(index, item) {
+			var output = "";
+			/* <a> href='item.link'><h1>item.name</h1></a> */
+			output += '<a href="'+item.link+'"><h1>'+item.name+'</h1></a>';
+			document.body.innerHTML += output;
+		});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

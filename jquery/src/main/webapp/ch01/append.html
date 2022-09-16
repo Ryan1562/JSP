@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.textstyle { font-size: 14pt; line-height: 20pt; margin: 10px; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 모든 태그 안에 class="textstyle"를 추가
+		$('*').addClass('textstyle');
+		// em+a em태그 다음에 오는 a태그는 배경색을 노랑
+		// each 앞에 조건에 맞는 각각에 대하여 실행
+		$('em+a').css('background','yellow').each(function() {
+			// 그 데이터를 클래스 잘라서 result1에 붙여라
+			$(this).appendTo('.result1');
+		});
+	});
+</script></head><body>
+<div><em>one</em><a>two</a><a>three</a><b>four</b><a>five</a><em>six</em></div>
+<hr>
+<div><span>prev + next로 검색한 엘리먼트 : </span><span class="result1"></span></div>
+</body>
+</html>

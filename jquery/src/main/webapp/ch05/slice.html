@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div { width: 60px; height: 60px; margin: 5px;  float: left; border: 2px blue solid; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			// 인덱스 2부터 3앞까지 즉 2
+			$('div').slice(2,3).css('background','yellow');
+			// 인덱스 4부터 끝까지
+			$('div').slice(4).css('background', 'pink');
+		});
+	});
+</script></head><body>
+	<button>노란색</button><br>
+	<div></div><div></div><div></div>
+	<div></div><div></div><div></div>
+</body>
+</html>

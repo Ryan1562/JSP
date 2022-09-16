@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			$('h2').html(function(index, item) { // 윈도 + 점,닷(.)
+				return '👍👍	 '+item+' 👍👍';
+			});
+		});
+	});
+</script></head><body>
+	<button>클릭</button>
+	<h2>날씨가 </h2>
+	<h2>가을이야 </h2>
+	<h2>쌀쌀해 </h2>
+</body>
+</html>

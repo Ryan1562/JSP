@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	* { margin: 10px; padding: 0px 30px; width: 100px; }
+	.border { border: 2px solid red; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// $('div.two').replaceWith('<div class="border">점심시간</div>');
+		// $('div.box').replaceWith('<div class="border">헐 ~</div>');
+		// $('div.three').replaceWith($('div.one'));
+		$('div.one').replaceWith($('div.three'));
+	});
+</script></head><body>
+<div>
+	<div class="box one">대박이야</div>
+	<div class="box two">jQuery</div>
+	<div class="box three">Java</div>
+	<div class="box four">JSP</div>
+</div>
+</body>
+</html>

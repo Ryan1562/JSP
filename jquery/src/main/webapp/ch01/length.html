@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var result = "";
+		var search = $('p,span,div.simpletext1');
+		result += '검색된 엘리먼트 갯수 : '+search.length+"\n";
+		search.each(function() {
+			result += $(this).text()+" ";
+		});
+		alert(result);
+	});
+</script></head><body>
+	<span id="simpletext1">simple</span>
+	<div class="simpletext1">jQuery</div>
+	<div id="simpletext2">jsp</div>
+	<p id="simpletext3">java</p>
+</body>
+</html>

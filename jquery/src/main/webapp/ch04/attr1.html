@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			// width나 height가 하나만 있으면 나머지는 같은 비율로 조정 
+			$('img').attr('width', function(index) {
+				return (index + 1) * 100;
+			});
+		});
+	});
+</script></head><body>
+	<button>크기조정</button><br>
+	<img alt="" src="../images/Chrysanthemum.jpg"><br>
+	<img alt="" src="../images/Desert.jpg"><br>
+	<img alt="" src="../images/Hydrangeas.jpg"><br>
+</body>
+</html>

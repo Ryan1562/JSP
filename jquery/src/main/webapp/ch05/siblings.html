@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	ul { float: left; margin: 5px; font-size: 16px; font-weight: bold; }
+	 /*               두개   상하, 좌우   하나만 사용 사방 모두 */
+	p { color: blue; margin: 10px 20px; font-size: 16px; padding: 5px; 
+		font-weight: bolder; clear: both; }
+	.yellow { background: yellow; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			var len = $('.yellow').siblings().css('color','red').length;
+			$('b').text(len);
+		});
+	});
+</script></head><body>
+<button>클릭</button><br>
+<ul><li>One</li><li>Two</li><li class="yellow">Three</li><li>Four</li></ul>
+<ul><li>Five</li><li>Six</li><li>Seven</li></ul>
+<ul><li>Eight</li><li class="yellow">Nine</li><li>Ten</li><li>Eleven</li></ul>
+<p>찾은 형제 갯수 : <b></b></p>
+</body>
+</html>

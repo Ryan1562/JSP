@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	span { color: blue; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			$('div').contents().remove('span');
+		});
+	});
+</script></head><body>
+	<button>버튼</button>
+	<p>문장</p>
+	<div><span class="selected">div 자식</span></div>
+	<p>그리고 <span>여기 </span>참고</p>
+	<div>그리고 여기 <span>여기도 div자식</span>일걸</div>
+</body>
+</html>

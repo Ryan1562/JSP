@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div { width: 100px; height: 120px;  margin: 10px; border: 2px solid green; 
+		border-radius: 10px; text-align: center; float: left; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var content = [{name:'로제',loc:'강남'},{name:'보검', loc:'대구'}, {name:'나은', loc:'대전'}];
+		$('div').append(function(index) {
+			var item = content[index];
+			var out = "<h2>"+item.name+"</h2><p>"+item.loc+"<p>";
+			return out;
+		});
+	});
+</script></head><body>
+	<div></div><div></div><div></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div, span { width: 60px; height: 60px; margin: 5px; float: left; 
+		border: 2px solid red;  background: white; }
+	.before { background: pink; }
+	.selected { border: 5px solid blue; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			// prev는 level같은 것끼리 이전 모두
+			$('div').prevAll().addClass('before');
+			$('div').prevAll('#fourth').addClass('selected');
+		});
+	});
+</script></head><body>
+	<button>버튼</button><br>
+	<div id="first">first</div>
+	<div id="second" class="middle">형제<div id="child">자식</div></div>
+	<div id="third" class="middle">형제</div>
+	<span id="fourth" class="middle">형제</span>
+	<span id="fifth" class="middle">형제</span>
+	<div id="sixth">마지막</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	p, div { margin: 5px; padding: 5px; }
+	.border { border: 2px solid red; }
+	.background  { background: yellow; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			$('div').find('p').addClass('background')
+			// p태그에 background적요하고 추가로 border도 적용
+			// .add().addClass('border');
+			// p태그 앞으로 가서 즉 div를 가르킴 jquery version 1또는 2는 andSelf
+			// .addBack().addClass('border');
+			// p태그 그만하고 div에 border
+				.end().addClass('border');
+		});		
+	});
+</script></head><body>
+	<button>클릭</button>
+	<div><p>첫번째 문장</p><p>두번째 문장</p></div>
+</body>
+</html>

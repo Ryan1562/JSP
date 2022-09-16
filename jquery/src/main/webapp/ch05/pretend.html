@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div { float: left; margin: 25px; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var fruits = ['사과','바나나','오렌지','멜론'];
+		var cars = ['소나타','말두타','벤츠'];
+		$.each(fruits, function(index, item) {
+			$('#fruit_list').prepend('<li>'+item+'</li>');
+		});
+		$.each(cars, function(index, item) {
+			$('<li>'+item+'</li>').prependTo('#car_list');
+		});
+	});
+</script></head><body>
+	<div><b>좋아하는 과일 : </b><ul id="fruit_list"></ul></div>
+	<div><b>좋아하는 차 : </b><ul id="car_list"></ul></div>
+</body>
+</html>

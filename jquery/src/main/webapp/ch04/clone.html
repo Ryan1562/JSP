@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			// append/appendTo 짤라서 붙인다
+			// $('div').append($('h1'));
+			// 복사가 clone
+			$('div').append($('h1').clone());
+		});
+	});
+</script></head><body>
+	<h1>가을인가요 ?</h1>
+	<button>클릭</button>
+	<hr><div></div><hr>
+</body>
+</html>

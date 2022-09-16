@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div { width: 60px; height: 60px; margin: 10px; float: left; }
+	p { clear: both; }
+	.redBorder { border: 2px solid red; }
+	.yellow { background: yellow; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			// div태그 redBorder하고 추가하고 yellow, p태그 yellow만
+			$('div').addClass('redBorder').add('p').addClass('yellow');
+		});
+	});
+</script></head><body>
+	<button>클릭</button><br>
+	<div></div><div></div><div></div>
+	<p>yellow만 적용</p>
+</body>
+</html>
