@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.red { color: red; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			$('#m1').html('<span class="red">대박 사건</span>');
+			$('#m2').text('<span class="red">대박 사건</span>');
+		});
+	});
+</script></head><body>
+	<button>버튼</button>
+	<div id="m1"></div><div id="m2"></div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/* setTimeout(() => {
+			var value = $('select > option:selected').val();
+			alert(value);
+		}, 5000); */
+		setInterval(() => {
+			var value = $('select > option:selected').val();
+			alert(value);
+		}, 5000);
+	});
+</script></head><body>
+	<select>
+		<option>산딸기</option><option>집딸기</option>
+		<option>판딸기</option><option>죽은딸기</option>
+		<option>알카리딸기</option><option>뱀딸기</option>
+	</select>
+</body>
+</html>

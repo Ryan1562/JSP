@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#b1').click(function() {
+			$('img').attr({ width:'100px', height:'100px'});
+			$('img').attr('src', function() {
+				return "../images/"+this.alt+".jpg";
+			});
+		});
+		$('#b2').click(function() {
+			$('img').removeAttr('src');
+		});
+	});
+</script></head><body>
+	<button id="b1">이미지 보기</button>
+	<button id="b2">이미지 삭제</button><br>
+	<img alt="image1" src=""><img alt="image2" src=""><img alt="image3" src="">
+</body>
+</html>

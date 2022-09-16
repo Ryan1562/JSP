@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('input:not(:checked)+span').css('background','yellow');
+		$('input:checked+span').css('background','pink');
+	});
+</script></head><body>
+	<div><input type="checkbox" name="fruit"><span>사과</span></div>
+	<div><input type="checkbox" name="fruit"><span>바나나</span></div>
+	<div><input type="checkbox" name="fruit" checked="checked"><span>오렌지</span></div>
+</body>
+</html>

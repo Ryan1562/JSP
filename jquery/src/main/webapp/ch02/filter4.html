@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+/* 		$('h2').css('background','orange');
+		$('h2:even').css('color','red');
+		$('h2:odd').css('color','blue'); */
+		$('h2').css('background','orange').filter(':even').css('color','red')
+			// 짝수를 순서대로 정열해서 그 짝수 중에서 홀수만 파랑
+			.filter(':odd').css('color','blue');
+	});
+</script></head>
+<body>
+	<h2>대박</h2><h2>사건</h2><h2>대박</h2><h2>사건</h2>
+	<h2>대박</h2><h2>사건</h2><h2>대박</h2><h2>사건</h2>
+</body>
+</html>

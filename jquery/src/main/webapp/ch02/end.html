@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// end 짝수를 뽑아서 빨강색하고 종료하고 다시 홀수만 뽑아서 파랑
+		$('h2').css('background','orange').filter(':even').css('color','red').end()
+			.filter(':odd').css('color','blue');
+	});
+</script></head>
+<body>
+	<h2>대박</h2><h2>사건</h2><h2>대박</h2><h2>사건</h2>
+	<h2>대박</h2><h2>사건</h2><h2>대박</h2><h2>사건</h2>
+</body>
+</html>

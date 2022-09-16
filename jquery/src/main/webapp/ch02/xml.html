@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div { margin: 10px; border: 3px solid green; border-radius: 10px; 
+		float: left; width: 120px; height: 120px; text-align: center; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	var xml = "<friends><friend><name>은우</name><language>JAVA</language></friend>";
+		xml+=          "<friend><name>하니</name><language>JSP</language></friend>";
+		xml+=          "<friend><name>로제</name><language>XML</language></friend></friends>";
+	$(function() {
+		var xmlDoc = $.parseXML(xml);  // xml라는 문자열을 xml문서로 해석
+		$(xmlDoc).find('friend').each(function() {
+			var out = '<div><h1>'+$(this).find('name').text()+'</h1>';
+			out += '<p>'+$(this).find('language').text()+'</p></div>';
+			document.body.innerHTML += out;
+		});
+	});
+</script></head><body>
+
+</body>
+</html>

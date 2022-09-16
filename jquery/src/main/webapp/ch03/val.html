@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// keyup 키보드로 데이터를 입력하고 손가락을 뗀 상태
+		$('input').keyup(function() {
+			// val() input, textarea, select등에 입력한 데이터를 읽을 때 사용
+			var value = $(this).val(); 
+			$('#console').text(value);
+		}).keyup();
+		$('button').click(function() {
+			// val('값')  값을 입력
+			$('input').val('메서드 연습');
+			$('input').keyup();
+		});
+	});
+</script></head><body>
+	<button>reset</button><p>
+	<input type="text" value="val메소드 연습" size="80">
+	<div id="console"></div>
+</body>
+</html>

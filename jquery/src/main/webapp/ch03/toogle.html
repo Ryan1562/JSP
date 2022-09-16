@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	/* cursor: pointer; 커서가 손바닥 모양으로 변경 */
+	p { margin: 4px; font-size: 16px;  font-weight: bolder; cursor: pointer; }
+	.blue { color: blue; font-size: 25px; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// toggleClass는 addClass와 removeClass를 반복
+		$('p').click(function() {
+			$(this).toggleClass('blue');
+		});
+	});	
+</script></head><body>
+	<p>엔리먼트에 적용된 클래스를</p>
+	<p>추가하고 제거하기 반복</p>
+</body>
+</html>

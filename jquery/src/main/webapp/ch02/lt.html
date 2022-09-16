@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table { width: 75%; }
+	.textstyle { color: blue; font-weight: bold; background: pink; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('td').addClass('textstyle');
+		// td:lt(2) 인덱스 2보다 작은 경우
+		$('td:lt(2)').removeClass('textstyle');
+		// td:gt(4) 인덱스가 4보다 큰 경우
+		$('td:gt(4)').removeClass('textstyle');
+	});
+</script></head><body>
+<table>
+	<tr><td>zero</td><td>one</td></tr>
+	<tr><td>two</td><td>three</td></tr>
+	<tr><td>four</td><td>five</td></tr>
+</table>
+</body>
+</html>

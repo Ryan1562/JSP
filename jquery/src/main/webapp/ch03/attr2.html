@@ -1,0 +1,48 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.spotlight { background: yellow; }
+	.redtext { color: red; }
+	.bluetext { color: blue; }
+	.largetext { font-size: 30pt; }
+	.italictext { font-style: italic; }
+	.box { border: 3pt solid red; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	var output = function(selector) {
+		var result = "";
+		console.log("\n"+selector+"로 검색한 갯수 : "+$(selector).length);
+		$(selector).each(function() {
+			result += $(this).text()+" ";
+		});
+		console.log(result+"\n");
+	};
+	$(function() {
+		output($('span[id]'));
+		output($('span[id="simpletext1"]'));
+		output($('span[id!="simpletext1"]'));
+		output($('span[id^="complex"]'));
+		output($('span[id$="text1"]'));
+		output($('span[id*="text"]'));
+		// id가 속성
+		$('span[id]').addClass('spotlight');
+		// id가 simpletext1
+		$('span[id="simpletext1"]').addClass('redtext');
+		// id가 simpletext1가 아닌
+		$('span[id!="simpletext1"]').addClass('bluetext');
+		// id가 complex시작
+		$('span[id^="complex"]').addClass('italictext');
+		// id가 text1을 끝나는 
+		$('span[id$="text1"]').addClass('largetext');
+		// id가 텍스가 포함
+		$('span[id*="text"]').addClass('box');
+	});
+</script></head><body>
+	<span id="simpletext1">simple</span>
+	<span class="simpletext2">jQuery</span>
+	<span id="complextext1">JAVA</span>
+	<span id="complextext2">JSP</span>
+	<span id="complex">대박사건</span>
+</body>
+</html>

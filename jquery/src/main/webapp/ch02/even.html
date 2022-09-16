@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('tr:odd').css('background','orange');
+		$('tr:even').css('background','pink');
+		$('tr:first').css('background','blue').css('color','yellow');
+	});
+</script></head><body>
+<table>
+	<tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+	<tr><th>홍길동</th><th>A형</th><th>서울</th></tr>
+	<tr><th>박길동</th><th>B형</th><th>부산</th></tr>
+	<tr><th>최길동</th><th>O형</th><th>인천</th></tr>
+	<tr><th>고길동</th><th>A형</th><th>대구</th></tr>
+	<tr><th>강길동</th><th>B형</th><th>대전</th></tr>
+	<tr><th>이길동</th><th>O형</th><th>광주</th></tr>
+</table>
+</body>
+</html>

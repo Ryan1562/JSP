@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('td:even').css('background','cyan');
+		$('td:odd').css('background','yellow');
+		$('td:first').css('background','violet');
+		$('td:last').css('background','green').css('color','white');
+		$('td:eq(4)').css('background','pink');
+	});
+</script></head><body>
+	<table>
+		<tr><td>대박</td><td>사건</td></tr>
+		<tr><td>대박</td><td>사건</td></tr>
+		<tr><td>대박</td><td>사건</td></tr>
+	</table>
+</body>
+</html>

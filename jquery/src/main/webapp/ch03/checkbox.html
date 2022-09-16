@@ -1,0 +1,30 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div { padding: 5px; }
+	.item { float: left; width: 100px; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// val()  : input, textarea, select
+		// text() : th, tr, span, div
+		$('#selectBtn').click(function() {
+			var checkList = "";
+			var checkedConsole = "";
+			$('input[name=hobby]:checkbox:checked').each(function() {
+				checkList += $(this).prev().text()+" ";  // 한글
+				checkedConsole += $(this).val()+" ";     // 영문
+			});
+			$('#content').html(checkList);
+			console.log(checkedConsole);
+		});		
+	});
+</script></head><body>
+<div><span class="item">음악감상</span><input type="checkbox" name="hobby" value="music"></div>
+<div><span class="item">요가</span><input type="checkbox" name="hobby" value="yoga"></div>
+<div><span class="item">독서</span><input type="checkbox" name="hobby" value="reading"></div>
+<div><input type="button" id="selectBtn" value="취미 선택"></div>
+<div id="content"></div>
+</body>
+</html>

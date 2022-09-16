@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('h2').filter(function(index) {
+			// return index % 3 == 0;
+			// return index > 3;
+			return index == 1 || index > 4;
+		}).css({
+			'background':'blue','color':'white'
+		});
+	});
+</script></head><body>
+	<h2>대박</h2><h2>사건</h2><h2>대박</h2><h2>사건</h2>
+	<h2>대박</h2><h2>사건</h2><h2>대박</h2><h2>사건</h2>
+</body>
+</html>

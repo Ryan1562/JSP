@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('h2,h3').each(function() {
+			if ($(this).is('.a1')) {
+				$(this).css('background','yellow');
+			}else {
+				$(this).css('background','cyan');
+			}
+		});
+	});
+</script></head>
+<body>
+	<h2>대박</h2><h3 class="a1">사건</h3><h2>대박</h2><h3>사건</h3>
+	<h2 class="a1">대박</h2><h3>사건</h3><h2>대박</h2><h3>사건</h3>
+</body>
+</html>
