@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.reverse { background: green;  color: white; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('h1').bind({
+			click: function() {	$(this).html(function(index, item) { return item +"+"; }); }, 
+			mouseenter: function() {	$(this).addClass('reverse');        },
+			mouseleave : function() {	$(this).removeClass('reverse');		}
+		});
+	});
+</script></head><body>
+	<h1>월요일이다</h1>
+	<h1>신나나 ?</h1>
+</body>
+</html>

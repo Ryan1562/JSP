@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img { width: 140px; height: 120px; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+/* 		$('img').bind('click', function() {
+			// 클릭한 그림의 폭을 1.2배 증가
+			$(this).width($(this).width()*1.2);
+			$(this).height($(this).height()*1.2);
+		}); */
+		$('img').one('click', function() {
+			// 클릭한 그림의 폭을 1.2배 증가
+			$(this).width($(this).width()*1.2);
+			$(this).height($(this).height()*1.2);
+		});
+	});
+</script></head><body>
+	<img alt="" src="../images/im18.jpg">
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div { width: 80px; height: 80px; margin: 3px; float: left; }
+	div#red { background: red; }
+	div#green { background: green; }
+	div#blue { background: blue; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// fadeTo : 투명도 변경
+		$('div#red').click(function() {		$(this).fadeTo('slow', 0.8);  	});
+		$('div#green').click(function() {	$(this).fadeTo('fast', 0.4);  	});
+		$('div#blue').click(function() {	$(this).fadeTo(3000, 0.1);  	});
+	});
+</script></head><body>
+	<div id="red"></div><div id="green"></div><div id="blue"></div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button:eq(0)').click(function() {
+			$('span:first').toggle();
+		});
+		$('button:eq(1)').click('slow',function() {
+			$('span:last').toggle('slow', function() {
+				$(this).css('background','yellow');
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<button>Show/Hide</button><span>날씨 좋다</span><p>
+	<button>천천히</button><span>안녕 컴 동지들</span>
+</body>
+</html>

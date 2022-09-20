@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('h2').click(function() {
+			$(this).html(function(index, item) {
+				return item+'😍';
+			});
+			setInterval(() => {
+				// $('h2').last().click();
+				$('h2').eq(1).trigger('click');
+			}, 1000);
+		});
+	});
+</script></head><body>
+	<h2>월요일</h2>
+	<h2>좋은날?</h2>
+</body>
+</html>

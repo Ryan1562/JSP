@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	ul { float: left; margin: 30px; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('a').bind('click', function() {
+			$('img').attr('src', $(this).attr('href'));
+			return false; // a태그 실행 취소
+		});
+	});
+</script></head><body>
+	<ul>
+		<li><a href="../images/image3.jpg">똘이</a></li>
+		<li><a href="../images/image4.jpg">냥이</a></li>
+	</ul>
+	<img alt="" src="">
+</body>
+</html>

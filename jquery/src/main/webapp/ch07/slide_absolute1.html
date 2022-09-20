@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	* { margin: 0px; padding: 0px; }
+	#canvas { background: gray; width: 600px; height: 400px; }
+	.inner_box { background: orange; width: 100px; height: 100px; position: absolute; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('.inner_box').each(function(index) {
+			$(this).css({ left:index*90,top:index*90});
+		});
+	});
+</script></head><body>
+<h1>테스트 슬라이더</h1>
+<div id="canvas">
+	<div class="inner_box"></div>
+	<div class="inner_box"></div>
+	<div class="inner_box"></div>
+	<div class="inner_box"></div>
+	<div class="inner_box"></div>
+</div>
+</body>
+</html>

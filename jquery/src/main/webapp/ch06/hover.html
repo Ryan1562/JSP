@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.reverse { background: blue; color: white; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 마우스를 올려 놓으면
+		$('h1').hover(function() {
+			$(this).addClass('reverse');
+		}, function() {
+			$(this).removeClass('reverse');
+		});
+	});
+</script></head><body>
+	<h1>월요일</h1>
+	<h1>좋아</h1>
+</body>
+</html>

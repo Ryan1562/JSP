@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div { width: 100px; height: 100px; background: green; position: relative; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('div').each(function(index) {
+			// index * 500 = 500, 1000, 1500, 2000, 2500, 3000 각각 0.5초 마다
+			$(this).delay(index*500).animate({left:500}, 'slow');
+		});
+	});
+</script></head><body>
+	<div></div><div></div><div></div>
+	<div></div><div></div><div></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#sel').change(function() {
+			$('#img').attr('src', $(this).val());
+		}).change();
+	});
+</script></head><body>
+<form action="" name="frm">
+	<select id="sel">
+		<option value="../images/strawberry.gif">딸기</option>
+		<option value="../images/banana.gif">바나나</option>
+		<option value="../images/apple.gif">사과</option>
+	</select><p>
+	<img alt="" src="" id="img">
+</form>
+</body>
+</html>

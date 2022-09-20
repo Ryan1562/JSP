@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img { width:40px; height: 30px; }	
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('img').dblclick(function() {
+			$('img').width($(this).width()+10);
+			$('img').height($(this).height()+10);
+		});
+	});
+</script></head><body>
+	<img alt="" src="../images/im18.jpg">
+</body>
+</html>

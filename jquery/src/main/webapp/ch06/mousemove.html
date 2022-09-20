@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div { width: 200px; height: 150px; background: red; cursor: pointer; margin: 30px; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('div').mousemove(function(event) {
+			// client : 브라우저, screen : 화면
+			$('p:first').html('페이지 x좌표:'+event.clientX+"<br>"+"페이지 y좌표:"+event.clientY+"<br>");
+			$('p:last').html('화면 x좌표:'+event.screenX+"<br>"+"화면 y좌표:"+event.screenY+"<br>");
+		});
+	});
+</script></head><body>
+	<div></div>
+	<p></p><p></p>
+</body>
+</html>

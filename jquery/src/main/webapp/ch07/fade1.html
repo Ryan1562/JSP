@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	span { color: red; cursor: pointer; }
+	div { margin: 3px; width: 80px; height: 80px; display: none; float: left; }
+	div#red { background: red; }
+	div#green { background: green; }
+	div#blue { background: blue; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// div태그 안보이는 것 중에 첫번째 것을 보이게
+		$('span').click(function() {
+			$('div:hidden:first').fadeIn(2000);
+		});		
+	});
+</script></head><body>
+	<span>클릭</span><p>
+	<div id="red"></div><div id="green"></div><div id="blue"></div>
+</body>
+</html>

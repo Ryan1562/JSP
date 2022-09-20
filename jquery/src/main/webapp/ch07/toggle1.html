@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('h1').click(function() {
+			// toggle : show + hide
+			// toggle : show, hide
+			// 3000 : 'slow', 'fast', 1/1000초
+			$(this).next().toggle(3000, function() {
+				// alert('대박');
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>대박</h1>
+	<div><h1>헐 ~ </h1><p>날씨좋아</p></div>
+	<h1>대박</h1>
+	<div><h1>헐 ~ </h1><p>날씨좋아</p></div>
+</body>
+</html>
