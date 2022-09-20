@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 객체
+		var k1 = {name:'로제', age:25, height:170};
+		var k2 = {age:23, hobby:'침뱉기'};
+		// k1과 속성이 같으면 뒤에 것이 덮어쓰고 같은 것이 없으면 추가
+		$.extend(k1, k2);
+		console.log(k1);
+	});
+</script></head><body>
+
+</body>
+</html>

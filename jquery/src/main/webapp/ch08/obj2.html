@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// liter미 작성
+		var car = { maker:'현대', model:'말두타', year:2022,buydate:new Date(2022,1,1),
+				owner: { name:'유라', age:25} 				
+		};
+		console.log('자동차 생산 : '+car.maker);  
+		console.log('자동차 모델 : '+car.model);
+		// 중첩
+		console.log('소유자 이름 : '+car.owner.name);
+		console.log(car.owner)
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

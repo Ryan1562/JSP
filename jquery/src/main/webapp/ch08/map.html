@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	* { font-size: 14pt; font-weight: bold; }
+	div { color: blue; }
+	p { color: green; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var weeks = ["Sunday","Monday","Tuesday","Wedenesday","Thursday","Friday","Saturday"];
+		var wks = $.map(weeks, function(item, index) {
+			return item.substr(0, 3);
+		});
+		$('div').text(weeks.join(', '));
+		$('p').text(wks.join(', '));
+	});
+</script></head><body>
+	<div></div><p></p>
+</body>
+</html>

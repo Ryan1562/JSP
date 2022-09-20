@@ -3,12 +3,14 @@
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript">
 	$(function() {
-		var list = ['로제','은우','보검','제니','로사'];
-		$('#list').text(list.join(', '));
+		var list = ["제니","로제","뷔","은우","보검","미미"];
+		$.each(list, function(index, item) {
+			$('ol').append('<li>'+item+'</li>');
+		});
 	});
 </script>
 </head>
 <body>
-	<div id="list"></div>
+	<ol></ol>
 </body>
 </html>

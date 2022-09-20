@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div.abs { width: 50px; height: 50px; position: absolute; 
+		left: 200px; top: 35px; background: green; cursor: pointer; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// offset.left : x축 좌표, offset.top : y축 좌표
+		$('div.abs').click(function() {
+			var offset = $(this).offset();  // 좌표를 가진 함수
+			$('#result').text(this.tagName+" 좌표("+offset.left+","+offset.top+") 폭 : "+
+					$(this).width()+", 높이 : "+$(this).height());
+		});
+	});
+</script></head><body>
+	<div id="result"></div>
+	<div class="abs"></div>
+</body>
+</html>

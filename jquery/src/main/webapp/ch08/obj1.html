@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var car = new Object();   // var car = {} 객체  [] 배열, 자바 {} 배열
+		car.maker = "현대"; car.model="소나타";  car.year = 2022;
+		car.buydate = new Date(2022,1,1); // 2022년 2월 1일 월은 01ㅜ터 11까지
+		var owner = new Object();
+		owner.name = "로제"; owner.age = 25;
+		car.owner = owner;
+		console.log('자동차 생산 : '+car.maker);  
+		console.log('자동차 모델 : '+car.model);
+		// 중첩
+		console.log('소유자 이름 : '+car.owner.name);
+		console.log(car.owner)
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

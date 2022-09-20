@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	* { font-size: 14pt; font-weight: bold; }
+	div {   color: blue; }
+	p {     color: green; }
+	span {	color: red;  }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var arr = [1,9,3,8,6,1,5,9,4,7,3,8,6,9,1];
+		$('span').text(arr.join(', '));
+		arr = $.grep(arr, function(item, index) {
+			return (item != 5 && index > 4);
+		});
+		$('div').text(arr.join(', '));
+		arr = $.grep(arr, function(item, index) {
+			return item != 9;
+		});
+		$('p').text(arr.join(', '));
+	});
+</script></head><body>
+	<div></div><p></p><span></span>
+</body>
+</html>

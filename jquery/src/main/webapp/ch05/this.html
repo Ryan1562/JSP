@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head>
+<script src="../js/jquery.js"></script>
+<script>
+	$(function(){
+		$("#div1").click(function(){
+			/* this : javascript, $(this) : jQuery */
+			console.log(this); console.log("----------------");
+			console.log($(this));
+			$("#test1").text($(this));
+			$("#test2").text(this);
+		});
+	});
+</script> </head><body>
+<div id="div1" style="height:100px; width:300px; border:1px solid black; background:yellow;"></div>
+<div id="test1"></div> 
+<div id="test2"></div>
+</body></html>
