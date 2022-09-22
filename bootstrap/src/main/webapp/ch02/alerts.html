@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script></head><body>
+<div class="container">
+	<h1> 경보 </h1> <h4>경보 유형 4가지 </h4>
+	<div class="alert alert-success">입력하신 모든 정보가 성공적으로 서버에 전송되었습니다. </div>
+	<div class="alert alert-info"> 모든 입력 사항은 필수 정보 입니다.</div>
+	<div class="alert alert-warning"> 입력하신 내용 중 잘못된 입력값이 있습니다. </div>
+	<div class="alert alert-danger"> 입력 폼을 다시 한번 확인해 주시기 바랍니다. </div>
+	<hr>
+	<h4>없애기 버튼(X)과 .alert-dismissable 을 이용한 경보 없애기 </h4>
+	<div class="alert alert-danger alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+		<strong>경고!</strong> 입력하신 이메일이 존재하지 않습니다.
+	</div>
+	<h4>경보내에 링크 처리는 .alert-link 선택자를 이용 </h4>
+	<div class="alert alert-success alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+		<strong>축하합니다.!</strong> 회원이 성공적으로 이뤄졌습니다. 
+		<a href="#" class="alert-link">홈으로 돌아가기 </a>
+	</div>
+</div></body></html>

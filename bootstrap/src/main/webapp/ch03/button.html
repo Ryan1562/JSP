@@ -1,0 +1,61 @@
+<!doctype html><html lang="ko-kr">  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <style>
+	    h2 { margin: 20px 0} 
+	    button.btn { margin-left: 10px;  float: left;  }
+	    .inner { margin: 100px auto; width: 70%}
+    </style>
+	<script src="../js/jquery.js"></script> 
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+    $(function() {	
+        $("#loading").click(function(){
+          $(this).button('loading').delay(3000).queue(function() {
+             $(this).button('reset');
+           });        
+        });
+    });
+    </script> 
+  </head>
+<body>
+ <div class="container">  
+    <h3>버튼 로딩   </h3>
+      <button  id="loading" class="btn btn-primary" data-loading-text="로딩 중..." type="button"> 
+       로딩 상태      </button>
+    <div class="clearfix"></div><hr>
+    <h3>단일 토글 </h3>
+      <button type="button" class="btn btn-primary" data-toggle="button">
+        단일 토글       </button>
+      <div class="clearfix"></div><hr>
+    <h3>체크박스 </h3>     
+         <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary">
+              <input type="checkbox"> 옵션 1
+            </label>
+            <label class="btn btn-primary">
+              <input type="checkbox"> 옵션 2
+            </label>
+            <label class="btn btn-primary">
+              <input type="checkbox"> 옵션 3
+            </label>
+          </div>
+        <div class="clearfix"></div><hr>
+    <h3>라디오 버튼  </h3>  
+       <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option1"> 옵션 1
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option2"> 옵션 2
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option3"> 옵션 3
+        </label>
+      </div>
+  </div>
+</body>
+</html>

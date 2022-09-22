@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script></head><body>
+<div class="container">
+	<h1> 네비게이션 </h1><h4>탭형 네비게이션 </h4>
+	<ul class="nav nav-tabs">
+		<li><a href="#">메뉴1</a></li><li><a href="#">메뉴2</a></li>
+		<li><a href="#">메뉴3</a></li> <li><a href="#">메뉴4</a></li>
+	</ul><br>
+	<h4>탭형 네비게이션 class="active" 추가한 경우 </h4>
+	<ul class="nav nav-tabs">
+		<li><a href="#">메뉴1</a></li><li class="active">
+		<a href="#">메뉴2</a></li><li><a href="#">메뉴3</a></li>
+		<li><a href="#">메뉴4</a></li>
+	</ul><br>
+	<h4>알약형 네비게이션 </h4>
+		<ul class="nav nav-pills">
+		<li><a href="#">메뉴1</a></li><li><a href="#">메뉴2</a></li>
+		<li><a href="#">메뉴3</a></li> <li><a href="#">메뉴4</a></li>
+	</ul><br>
+	<h4>알약형 네비게이션 class="active" 추가한 경우 </h4>
+		<ul class="nav nav-pills">
+		<li class="active"><a href="#">메뉴1</a></li>
+		<li><a href="#">메뉴2</a></li> <li><a href="#">메뉴3</a></li>
+		<li><a href="#">메뉴4</a></li> </ul><br>
+	<h4>알약형 네비게이션은 수직으로 정열 가능 </h4>
+	<div class="col-md-3">
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active"><a href="#">메뉴1</a></li>
+			<li><a href="#">메뉴2</a></li><li><a href="#">메뉴3</a></li>
+			<li><a href="#">메뉴4</a></li>
+	</ul></div><br>
+	<div class="clearfix"></div>
+	<h4>탭형 네비게이션 양쪽 정열 </h4>
+	<ul class="nav nav-tabs nav-justified">
+		<li class="active"><a href="#">메뉴1</a></li>
+		<li><a href="#">메뉴2</a></li> <li><a href="#">메뉴3</a></li>
+		<li><a href="#">메뉴4</a></li> </ul> <br>
+	<h4>알약형 네비게이션 양쪽 정열 </h4>
+	<ul class="nav nav-pills nav-justified">
+		<li class="active"><a href="#">메뉴1</a></li>
+		<li><a href="#">메뉴2</a></li> <li><a href="#">메뉴3</a></li>
+		<li><a href="#">메뉴4</a></li> </ul> <br>
+	<h4>class="disabled"을 이용한 링크 비활성화 </h4>
+	<ul class="nav nav-pills">
+		<li><a href="#">메뉴1</a></li> <li><a href="#">메뉴2</a></li>
+		<li class="disabled"><a href="#">메뉴3</a></li>
+		<li><a href="#">메뉴4</a></li>
+	</ul><br>
+	<h4>탭형 네비게이션 드롭다운 </h4>
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#">메뉴1</a></li>
+		<li><a href="#">메뉴2</a></li>
+		<li><a href="#">메뉴3</a></li>
+		<li class="dropdown">
+			<a data-toggle="dropdown" href="#">여기 클릭 <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a role="menuitem" href="#">메뉴 1</a></li>
+				<li><a role="menuitem" href="#">메뉴 2</a></li>
+				<li><a role="menuitem" href="#">메뉴 3</a></li>
+				<li class="divider"></li>
+				<li><a role="menuitem" href="#">분리된 메뉴 </a></li>
+			</ul>
+		</li>
+	</ul>	<br>
+	<h4>알약형 형 네비게이션 드롭다운 </h4>
+	<ul class="nav nav-pills">
+		<li class="active"><a href="#">메뉴1</a></li>
+		<li><a href="#">메뉴2</a></li>
+		<li><a href="#">메뉴3</a></li>
+		<li class="dropdown">
+			<a data-toggle="dropdown" href="#">여기 클릭 
+					<span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a role="menuitem" href="#">메뉴 1</a></li>
+				<li><a role="menuitem" href="#">메뉴 2</a></li>
+				<li><a role="menuitem" href="#">메뉴 3</a></li>
+				<li class="divider"></li>
+				<li><a role="menuitem" href="#">분리된 메뉴 </a></li>
+		</ul>
+	</li> </ul>
+</div></body></html>

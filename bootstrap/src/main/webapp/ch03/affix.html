@@ -1,0 +1,59 @@
+<!doctype html><html lang="ko-kr"><head> <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <style type="text/css">
+        /* Custom Styles */
+        ul.nav-tabs{  width: 140px;  margin-top: 20px;  border-radius: 4px;
+            border: 1px solid #ddd;  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);  }
+        ul.nav-tabs li{ margin: 0;   border-top: 1px solid #ddd;        }
+        ul.nav-tabs li:first-child{  border-top: none;        }
+        ul.nav-tabs li a{ margin: 0; padding: 8px 16px;   border-radius: 0;      }
+        ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+            color: #fff;  background: #0088cc;  border: 1px solid #0088cc;       }
+        ul.nav-tabs li:first-child a{ border-radius: 4px 4px 0 0;      }
+        ul.nav-tabs li:last-child a{  border-radius: 0 0 4px 4px;      }
+        ul.nav-tabs.affix{
+            top: 30px; /* Set the top position of pinned element */
+        }
+    </style>
+	<script src="../js/jquery.js"></script> 
+    <script src="../js/bootstrap.min.js"></script> </head>
+<body data-spy="scroll" data-target="#myScrollspy">
+ <div class="container"> 
+    <div class="jumbotron">
+        <h1>Bootstrap Affix</h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-5 col-sm-3 col-md-2" id="myScrollspy">
+            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="140">
+                <li class="active"><a href="#one">Section One</a></li>
+                <li><a href="#two">Section Two</a></li>
+                <li><a href="#three">Section Three</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-7 col-sm-9 col-md-10">
+               <h2 id="one">Tutorial One</h2>
+               <p>Loremiam irsus putate quam,Sed in tellus rutrum, porttitor diam ac, rhoncus enim. Suspendisse </p>
+                <p>Quisque umsan pellentesqueer pulvinar. Sed eget hendrerit mauris. Nam sollicitudin, lectus scelerisque tincidunt accumsan, dolor mi molestie diam, a blandit libero mi eget nequ</p>
+                <p>Etiam preula porttitor ultricies scelerisque. Nulla malesuada ullamcorper ipsum, quis pretium felis tincidunt ut. Sed vel lacus porta, consequat orci id, dignissim ipsum. Morbi luctus, </p>
+                <p>Mauris ve, augue tempuscus justo blandit leo, quis interdum velit ante non odio. Aliquam a purus felis. Aenean nunc ipsum, facilisis ut augue eu, vestibulum ullamcorper metus.</p>
+                <p>Curabiturger Suspendisse urna id turpis congue interdum. Mauris vel enim eu neque tristique tempor eget sit amet orci.</p>
+               <hr>  <h2 id="two">Tutorial Two</h2>
+               <p>Lorem intulum laoreet orcium sodales. Sed in tellus rutrum, porttitor diam ac, rhoncus enim. Suspendisse vulputate pharetra mi vitae porta.</p>
+               <p>Quisquedinallis condimentum.idunt accumsan, dolor mi molestie diam, a blandit libero mi eget neque. Curabitur ac mauris congue, cursus enim sed, vestibulum nisi. Sed gravida r</p>
+                <p>Etiam litgue Morbi est mi, Aliquam sit amet turpis vitae diam ultricies scelerisque. Nulla malesuada ullamcorper ipsum, quis pretium felis tincidunt ut. Sed vel lacuIn porta vulputate nibh,</p>
+                <p>Maurisnecsemperricies. Aenean nunc ipsum, facilisis ut augue eu, vestibulum ullamcorper metus.</p>
+                <p>Curabiemptudin spendisse or eget sit amet orci.</p>
+               <hr>  <h2 id="three">Tutorial Three</h2>
+               <p>Lorem ientum uada eleifend ullamcorper urna at, lobortis nunc. Nam ac nisi non sapien vestibulum sodales. Sed in tellus rutrum, porttitor</p>
+                <p>Quisquter. , non tellus. Nam sollicitudin, lectus sc diam, a blandit libero mi eget neque. Curabitur ac mauris congue, cursus enim sed, vestibulum nisi. Sed gravida</p>
+                <p>Etiam s placerat liquam  pretium felis tincidunt ut. Sed vel lacus porta, consequ</p>
+                <p>Mauriseet dictum  purus orper metus.</p>
+                <p>Curabiuspendisse Suspendisseue tristique tempor eget sit amet orci.</p>
+            </div>
+         </div>
+  </div>  </body></html>
