@@ -1,0 +1,34 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head><body>
+<div data-role="page">
+	<div data-role="header"><h1>모바일 페이지</h1></div>
+	<div data-role="content">
+		<ul>
+			<li><a href="#page1" data-transition="slide" data-role="button">동물</a></li>
+			<li><a href="#page2" data-transition="pop" data-rel="dialog"
+				 data-role="button">과일</a></li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed"><h1>바닥글</h1></div>
+</div>
+<div data-role="page" id="page1">
+	<div data-role="header" data-add-back-btn="true"><h1>동물</h1></div>
+	<div data-role="content">
+		<ul><li>사자</li><li>호랑이</li><li>독수리</li></ul>		
+	</div>
+	<div data-role="footer" data-position="fixed"><h1>바닥글</h1></div>
+</div>
+<div data-role="page" id="page2">
+	<div data-role="header"><h1>과일</h1></div>
+	<div data-role="content">
+		<ul><li>사과</li><li>수박</li><li>메론</li></ul>		
+	</div>
+	<div data-role="footer" data-position="fixed"><h1>바닥글</h1></div>
+</div>
+</body>
+</html>

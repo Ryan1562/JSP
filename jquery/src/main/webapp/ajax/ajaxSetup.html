@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#submit').click(function() {
+			// var sendData = 'name='+$('#name').val()+'&pass='+$('#pass').val();
+			var sendData = $('form').serialize();
+			// get방식/post방식을 선택하여 요청할 수 있다
+			$.ajaxSetup({type:'post', url:'loginCheck.jsp', dataType:'text', 
+				success: function(data) {
+				$('#msg').html(data);	
+			}});
+			$.ajax({data:sendData});
+			return false;
+		});
+	});
+</script></head><body>
+	<form action="">
+		<fieldset><legend>권한 체크</legend>
+			이름 : <input type="text" name="name" id="name"><p>
+			암호 : <input type="password" name="pass" id="pas"><p>
+			<input type="button" value="전송" id="submit">
+		</fieldset>
+	</form>
+	<div id="msg"></div>
+</body>
+</html>

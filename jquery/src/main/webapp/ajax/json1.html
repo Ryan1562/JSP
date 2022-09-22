@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	td { border: 1px solid green; }
+</style>	
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.getJSON('item.json', function(data) {
+			$('#treeData').append('<tr><th>id</th><th>이름</th><th>가격</th><th>설명</th></tr>');
+			$.each(data, function() {
+				$('#treeData').append('<tr><td>'+this.id+'</td><td>'+this.name+'</td>'+
+						'<td>'+this.price+'</td><td>'+this.description+'</td></tr>');
+			});
+		});
+	});
+</script></head><body>
+	<table id="treeData"></table>
+</body>
+</html>

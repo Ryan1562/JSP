@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	th, td { border: 2px solid green; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {		
+		$.get('item.xml', function(data) {
+			$('#treeData').append('<tr><th>id</th><th>이름</th><th>가격</th><th>설명</th></tr>');
+			$(data).find('item').each(function() {
+				$('#treeData').append('<tr><td>'+$(this).attr('id')+'</td>'+
+						'<td>'+$(this).attr('name')+'</td>'+
+						'<td>'+$(this).find('price').text()+'</td>'+
+						'<td>'+$(this).find('description').text()+'</td></tr>');
+			});
+		});
+	});
+</script></head><body>
+	<table id="treeData"></table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#btn').click(function() {
+			var sendData = "name="+$('#name').val();
+			$.post('welcome.jsp', sendData, function(data) {
+				$('#message').html(data);
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<form action="">
+		<h2>이름 입력</h2>
+		<input type="text" name="name" id="name" required="required"><p>
+		<input type="button" id="btn" value="전송">
+	</form>
+	<div id="message"></div>
+</body>
+</html>
